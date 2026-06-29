@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #070b16; color: #eef4ff; font-family: Arial, Helvetica, sans-serif; }
+button, select { font: inherit; }
+.dashboard { min-height: 100vh; padding: 22px; background: radial-gradient(circle at top left, rgba(0,180,255,.20), transparent 35%), #070b16; }
+.header { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 18px; flex-wrap: wrap; }
+.brand h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+.brand p { margin: 6px 0 0; color: #9fb0c8; }
+.badge { border: 1px solid #2a3853; background: #101a2d; color: #cfe4ff; padding: 10px 14px; border-radius: 999px; }
+.grid { display: grid; grid-template-columns: 360px 1fr; gap: 18px; }
+.card { background: rgba(13, 22, 38, .92); border: 1px solid #1f304d; border-radius: 18px; padding: 18px; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+.card h2 { margin: 0 0 14px; font-size: 18px; }
+.symbol-list { display: grid; gap: 10px; }
+.symbol { border: 1px solid #233553; background: #0b1324; border-radius: 14px; padding: 12px; display:flex; justify-content:space-between; cursor:pointer; }
+.symbol.active { outline: 2px solid #32d6ff; }
+.name { font-weight: 700; }
+.price { color: #9fb0c8; margin-top: 4px; }
+.signal { font-weight: 800; padding: 7px 10px; border-radius: 999px; font-size: 12px; }
+.buy { background: rgba(35, 220, 135, .15); color: #39e58f; }
+.sell { background: rgba(255, 84, 84, .15); color: #ff6b6b; }
+.wait { background: rgba(255, 202, 68, .15); color: #ffd45c; }
+.metrics { display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+.metric { background:#0b1324; border:1px solid #233553; border-radius:14px; padding:14px; }
+.metric span { color:#9fb0c8; font-size:12px; display:block; }
+.metric strong { font-size:20px; display:block; margin-top:6px; }
+.chart { height: 520px; overflow: hidden; border-radius: 14px; border: 1px solid #233553; }
+.rules { display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top:18px; }
+.rule { background:#0b1324; border:1px solid #233553; border-radius:14px; padding:14px; color:#cfe4ff; }
+.footer-note { margin-top: 18px; color:#9fb0c8; font-size:13px; line-height:1.5; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .metrics, .rules { grid-template-columns: 1fr 1fr; } .chart { height: 420px; } }
+@media (max-width: 560px) { .dashboard { padding: 14px; } .metrics, .rules { grid-template-columns: 1fr; } .brand h1 { font-size: 23px; } }
